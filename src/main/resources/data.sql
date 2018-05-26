@@ -1,0 +1,1 @@
+insert into teste.tarefa (id, nome) values (-1, 'Tarefa 1');
