@@ -9,16 +9,14 @@ import javax.persistence.Table;
 
 @Entity
 @Table(schema = "poc")
-public class Tarefa {
+public class Usuario {
 
 	@Id
-	@SequenceGenerator(name = "seq_tarefa", initialValue = 1, allocationSize = 100)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_tarefa")
+	@SequenceGenerator(name = "seq_usuario", initialValue = 1, allocationSize = 100)
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_usuario")
 	private Long id;
 	
 	private String nome;
-	
-	private String descricao; 
 
 	public Long getId() {
 		return id;
@@ -34,13 +32,5 @@ public class Tarefa {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
 	}
 }
